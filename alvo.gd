@@ -8,7 +8,7 @@ func _ready():
 func _on_body_entered(body):
 		patoAtual = body
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("Atirar"):
 		$AudioStreamPlayer2D.play()
 		if patoAtual == null:

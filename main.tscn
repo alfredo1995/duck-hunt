@@ -1,10 +1,79 @@
-[gd_scene load_steps=6 format=3 uid="uid://g1lb4ohs0kcf"]
+[gd_scene load_steps=13 format=3 uid="uid://g1lb4ohs0kcf"]
 
 [ext_resource type="Texture2D" uid="uid://dga0nkhhwosph" path="res://Material Duck Hunt/Material Duck Hunt/cenariotras.png" id="1_pnme8"]
 [ext_resource type="Script" path="res://main.gd" id="1_rflgi"]
 [ext_resource type="Texture2D" uid="uid://b8jjhookca0tl" path="res://Material Duck Hunt/Material Duck Hunt/cenariofrente.png" id="2_kyuap"]
-[ext_resource type="PackedScene" uid="uid://cpc7lt656hgr4" path="res://pato.tscn" id="3_q8b6v"]
+[ext_resource type="PackedScene" uid="uid://ciu3x0rf0bkbn" path="res://topo.tscn" id="5_68e33"]
 [ext_resource type="PackedScene" uid="uid://cwcb02r5ir786" path="res://alvo.tscn" id="5_u7w55"]
+[ext_resource type="PackedScene" uid="uid://d3og3qatefep5" path="res://chao.tscn" id="6_6emvo"]
+[ext_resource type="Texture2D" uid="uid://d4a51j1lbtauq" path="res://Material Duck Hunt/Material Duck Hunt/cao/captura.png" id="7_lybpu"]
+[ext_resource type="Texture2D" uid="uid://cn3qadao83yh4" path="res://Material Duck Hunt/Material Duck Hunt/cao/rindo.png" id="8_ja6cc"]
+
+[sub_resource type="Animation" id="Animation_urv4q"]
+resource_name = "captura"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("captura:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(394, 549), Vector2(394, 405), Vector2(394, 555)]
+}
+
+[sub_resource type="Animation" id="Animation_rqje7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("captura:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(399, 549)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("rindo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(394, 562)]
+}
+
+[sub_resource type="Animation" id="Animation_q4ojp"]
+resource_name = "rindo"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rindo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(394, 562), Vector2(394, 407), Vector2(394, 546)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_abr2l"]
+_data = {
+"RESET": SubResource("Animation_rqje7"),
+"captura": SubResource("Animation_urv4q"),
+"rindo": SubResource("Animation_q4ojp")
+}
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_rflgi")
@@ -19,7 +88,35 @@ z_index = 1
 texture = ExtResource("2_kyuap")
 centered = false
 
-[node name="Pato" parent="." instance=ExtResource("3_q8b6v")]
-position = Vector2(288, 589)
-
 [node name="Alvo" parent="." instance=ExtResource("5_u7w55")]
+
+[node name="gerapato" type="Timer" parent="."]
+one_shot = true
+
+[node name="espera" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="topo" parent="." instance=ExtResource("5_68e33")]
+position = Vector2(386, -59)
+
+[node name="chao" parent="." instance=ExtResource("6_6emvo")]
+position = Vector2(384, 780)
+
+[node name="captura" type="Sprite2D" parent="."]
+position = Vector2(399, 549)
+texture = ExtResource("7_lybpu")
+
+[node name="rindo" type="Sprite2D" parent="."]
+position = Vector2(394, 562)
+texture = ExtResource("8_ja6cc")
+
+[node name="cao" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_abr2l")
+}
+
+[connection signal="timeout" from="gerapato" to="." method="_on_gerapato_timeout"]
+[connection signal="timeout" from="espera" to="." method="_on_espera_timeout"]
+[connection signal="body_entered" from="topo" to="." method="_on_topo_body_entered"]
+[connection signal="body_entered" from="chao" to="." method="_on_chao_body_entered"]
