@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://g1lb4ohs0kcf"]
+
+[ext_resource type="Texture2D" uid="uid://dga0nkhhwosph" path="res://Material Duck Hunt/Material Duck Hunt/cenariotras.png" id="1_pnme8"]
+[ext_resource type="Texture2D" uid="uid://b8jjhookca0tl" path="res://Material Duck Hunt/Material Duck Hunt/cenariofrente.png" id="2_kyuap"]
+[ext_resource type="PackedScene" uid="uid://cpc7lt656hgr4" path="res://pato.tscn" id="3_q8b6v"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -3
+texture = ExtResource("1_pnme8")
+centered = false
+
+[node name="frente" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_kyuap")
+centered = false
+
+[node name="Pato" parent="." instance=ExtResource("3_q8b6v")]
+position = Vector2(288, 589)

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqn6c7xyhrxyo"
+path="res://.godot/imported/cao_captura.wav-603b77c8a744ab246e6ae648dc53957b.sample"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/cao_captura.wav"
+dest_files=["res://.godot/imported/cao_captura.wav-603b77c8a744ab246e6ae648dc53957b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

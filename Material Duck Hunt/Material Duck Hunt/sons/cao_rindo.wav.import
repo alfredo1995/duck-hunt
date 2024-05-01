@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://chwk4phepa2e6"
+path="res://.godot/imported/cao_rindo.wav-90d6889aa8d3a3563a1bb7b15911f050.sample"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/cao_rindo.wav"
+dest_files=["res://.godot/imported/cao_rindo.wav-90d6889aa8d3a3563a1bb7b15911f050.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
