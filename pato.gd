@@ -6,6 +6,7 @@ var speed = 100
 var queda = 1
 
 func _ready():
+		$quack.wait_time = randf_range(0.8,2)
 		randomize()
 		$movimento.wait_time = randf_range(0.4, 2)
 		$anima.wait_time = randf_range(0.6, 1)
@@ -38,6 +39,11 @@ func mata():
 	$morte.start()
 
 func _on_morte_timeout():
+	$quack.stop()
 	$AnimatedSprite2D.animation = "morte"
 	queda = -1
 	lado = 0
+
+
+func _on_quack_timeout():
+	$audio.play()

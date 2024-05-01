@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cpc7lt656hgr4"]
+[gd_scene load_steps=16 format=3 uid="uid://cpc7lt656hgr4"]
 
 [ext_resource type="Script" path="res://pato.gd" id="1_csvm8"]
 [ext_resource type="Texture2D" uid="uid://dfiljrtttsnfk" path="res://Material Duck Hunt/Material Duck Hunt/passaro/cima/sprite_0.png" id="1_osj54"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bulaisq4mrogy" path="res://Material Duck Hunt/Material Duck Hunt/passaro/morte/2.png" id="9_tjjtg"]
 [ext_resource type="Texture2D" uid="uid://c1he4nrgrrin7" path="res://Material Duck Hunt/Material Duck Hunt/passaro/morte/3.png" id="10_36iad"]
 [ext_resource type="Texture2D" uid="uid://dr2vdjfvlpfba" path="res://Material Duck Hunt/Material Duck Hunt/passaro/susto.png" id="11_xq036"]
+[ext_resource type="AudioStream" uid="uid://m1s73vy3ta3w" path="res://Material Duck Hunt/Material Duck Hunt/sons/pato.wav" id="13_0qemo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4w2dk"]
 animations = [{
@@ -94,6 +95,13 @@ autostart = true
 [node name="morte" type="Timer" parent="."]
 wait_time = 0.2
 
+[node name="audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_0qemo")
+
+[node name="quack" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="movimento" to="." method="_on_movimento_timeout"]
 [connection signal="timeout" from="anima" to="." method="_on_anima_timeout"]
 [connection signal="timeout" from="morte" to="." method="_on_morte_timeout"]
+[connection signal="timeout" from="quack" to="." method="_on_quack_timeout"]

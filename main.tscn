@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://g1lb4ohs0kcf"]
+[gd_scene load_steps=20 format=3 uid="uid://g1lb4ohs0kcf"]
 
 [ext_resource type="Texture2D" uid="uid://dga0nkhhwosph" path="res://Material Duck Hunt/Material Duck Hunt/cenariotras.png" id="1_pnme8"]
 [ext_resource type="Script" path="res://main.gd" id="1_rflgi"]
@@ -8,6 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://d3og3qatefep5" path="res://chao.tscn" id="6_6emvo"]
 [ext_resource type="Texture2D" uid="uid://d4a51j1lbtauq" path="res://Material Duck Hunt/Material Duck Hunt/cao/captura.png" id="7_lybpu"]
 [ext_resource type="Texture2D" uid="uid://cn3qadao83yh4" path="res://Material Duck Hunt/Material Duck Hunt/cao/rindo.png" id="8_ja6cc"]
+[ext_resource type="Texture2D" uid="uid://cnxwbvhhxa7yc" path="res://Material Duck Hunt/Material Duck Hunt/hud.png" id="9_ab04b"]
+[ext_resource type="FontFile" uid="uid://b5yk6kasstjkb" path="res://Material Duck Hunt/Material Duck Hunt/PressStart2P.ttf" id="10_mw27k"]
+[ext_resource type="AudioStream" uid="uid://dqn6c7xyhrxyo" path="res://Material Duck Hunt/Material Duck Hunt/sons/cao_captura.wav" id="11_7gsr2"]
+[ext_resource type="AudioStream" uid="uid://chwk4phepa2e6" path="res://Material Duck Hunt/Material Duck Hunt/sons/cao_rindo.wav" id="12_bxdxj"]
+[ext_resource type="AudioStream" uid="uid://d2wue8ycxx772" path="res://Material Duck Hunt/Material Duck Hunt/sons/colidiu.wav" id="13_1qgh5"]
+[ext_resource type="AudioStream" uid="uid://bbqi05k6rh3ro" path="res://Material Duck Hunt/Material Duck Hunt/sons/flyaway.wav" id="14_wwdyk"]
+[ext_resource type="AudioStream" uid="uid://df8rkc0bm6gps" path="res://Material Duck Hunt/Material Duck Hunt/sons/round.wav" id="15_b0j4j"]
 
 [sub_resource type="Animation" id="Animation_urv4q"]
 resource_name = "captura"
@@ -89,6 +96,7 @@ texture = ExtResource("2_kyuap")
 centered = false
 
 [node name="Alvo" parent="." instance=ExtResource("5_u7w55")]
+position = Vector2(43, -18)
 
 [node name="gerapato" type="Timer" parent="."]
 one_shot = true
@@ -115,6 +123,37 @@ texture = ExtResource("8_ja6cc")
 libraries = {
 "": SubResource("AnimationLibrary_abr2l")
 }
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD"]
+position = Vector2(388, 603)
+texture = ExtResource("9_ab04b")
+
+[node name="Label" type="Label" parent="HUD"]
+offset_left = 354.0
+offset_top = 580.0
+offset_right = 422.0
+offset_bottom = 624.0
+theme_override_fonts/font = ExtResource("10_mw27k")
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cao_captura" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_7gsr2")
+
+[node name="cao_rindo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_bxdxj")
+
+[node name="colidiu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_1qgh5")
+
+[node name="flyAway" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_wwdyk")
+
+[node name="novoTurno" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_b0j4j")
 
 [connection signal="timeout" from="gerapato" to="." method="_on_gerapato_timeout"]
 [connection signal="timeout" from="espera" to="." method="_on_espera_timeout"]

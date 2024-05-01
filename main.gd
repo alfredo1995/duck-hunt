@@ -9,8 +9,10 @@ func _ready():
 	$gerapato.start()
 
 func _process(_delta):
+	$HUD/Label.text = str(capturados)
+	
 	$Alvo.position.x = get_local_mouse_position().x
-	$Alvo.position.y = get_local_mouse_position().y
+	$Alvo.position.y = get_local_mouse_position().y	
 
 func nasce():
 	var novoP = pato.instantiate()
@@ -25,15 +27,18 @@ func _on_gerapato_timeout():
 
 
 func _on_espera_timeout():
+	$novoTurno.play()
 	$gerapato.start()
 
 
 func _on_topo_body_entered(body):
+	$flyAway.play()
 	flyAway = 1
 	patosNaTela -= 1
 	atualizaTurno()
 	
 func _on_chao_body_entered(body):
+	$colidiu.play()
 	capturados += 1
 	patosNaTela -= 1
 	atualizaTurno()
@@ -43,7 +48,10 @@ func atualizaTurno():
 		$espera.start()
 		if(flyAway == 1):
 			$cao.play("rindo");
+			$cao_rindo.play()
 			flyAway = 0
+			capturados = 0
 		else:
 			$cao.play("captura")
+			$cao_captura.play()
 		
