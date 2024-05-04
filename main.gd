@@ -31,13 +31,13 @@ func _on_espera_timeout():
 	$gerapato.start()
 
 
-func _on_topo_body_entered(body):
+func _on_topo_body_entered(_body):
 	$flyAway.play()
 	flyAway = 1
 	patosNaTela -= 1
 	atualizaTurno()
 	
-func _on_chao_body_entered(body):
+func _on_chao_body_entered(_body):
 	$colidiu.play()
 	capturados += 1
 	patosNaTela -= 1
@@ -55,3 +55,5 @@ func atualizaTurno():
 			$cao.play("captura")
 			$cao_captura.play()
 		
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://title_scene.tscn")

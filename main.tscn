@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://g1lb4ohs0kcf"]
+[gd_scene load_steps=20 format=3 uid="uid://edhugfncuir0"]
 
 [ext_resource type="Texture2D" uid="uid://dga0nkhhwosph" path="res://Material Duck Hunt/Material Duck Hunt/cenariotras.png" id="1_pnme8"]
 [ext_resource type="Script" path="res://main.gd" id="1_rflgi"]
@@ -139,23 +139,7 @@ theme_override_fonts/font = ExtResource("10_mw27k")
 text = "000"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Pause" type="Sprite2D" parent="HUD"]
-visible = false
-position = Vector2(390, 179.5)
-scale = Vector2(1.33333, 1)
-texture = ExtResource("9_ab04b")
-
-[node name="Label2" type="Label" parent="HUD"]
-visible = false
-offset_left = 350.0
-offset_top = 157.0
-offset_right = 430.0
-offset_bottom = 201.0
-theme_override_fonts/font = ExtResource("10_mw27k")
-text = "PAUSE"
-horizontal_alignment = 1
-vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="cao_captura" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_7gsr2")
@@ -172,7 +156,28 @@ stream = ExtResource("14_wwdyk")
 [node name="novoTurno" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_b0j4j")
 
+[node name="Button" type="Button" parent="."]
+z_index = 1
+offset_left = 344.0
+offset_top = 646.0
+offset_right = 421.0
+offset_bottom = 711.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
+position = Vector2(44, 32)
+texture = ExtResource("9_ab04b")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 23.0
+offset_right = 77.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("10_mw27k")
+text = "MENU"
+
 [connection signal="timeout" from="gerapato" to="." method="_on_gerapato_timeout"]
 [connection signal="timeout" from="espera" to="." method="_on_espera_timeout"]
 [connection signal="body_entered" from="topo" to="." method="_on_topo_body_entered"]
 [connection signal="body_entered" from="chao" to="." method="_on_chao_body_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
