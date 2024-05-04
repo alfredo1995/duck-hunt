@@ -6,7 +6,7 @@ var flyAway = 0
 var capturados = 0
 
 func _ready():
-	$gerapato.start()
+	$gerapato.start()		
 
 func _process(_delta):
 	$HUD/Label.text = str(capturados)

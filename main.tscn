@@ -16,22 +16,6 @@
 [ext_resource type="AudioStream" uid="uid://bbqi05k6rh3ro" path="res://Material Duck Hunt/Material Duck Hunt/sons/flyaway.wav" id="14_wwdyk"]
 [ext_resource type="AudioStream" uid="uid://df8rkc0bm6gps" path="res://Material Duck Hunt/Material Duck Hunt/sons/round.wav" id="15_b0j4j"]
 
-[sub_resource type="Animation" id="Animation_urv4q"]
-resource_name = "captura"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("captura:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.2, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(394, 549), Vector2(394, 405), Vector2(394, 555)]
-}
-
 [sub_resource type="Animation" id="Animation_rqje7"]
 length = 0.001
 tracks/0/type = "value"
@@ -57,6 +41,22 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(394, 562)]
+}
+
+[sub_resource type="Animation" id="Animation_urv4q"]
+resource_name = "captura"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("captura:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(394, 549), Vector2(394, 405), Vector2(394, 555)]
 }
 
 [sub_resource type="Animation" id="Animation_q4ojp"]
@@ -137,6 +137,23 @@ offset_right = 422.0
 offset_bottom = 624.0
 theme_override_fonts/font = ExtResource("10_mw27k")
 text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pause" type="Sprite2D" parent="HUD"]
+visible = false
+position = Vector2(390, 179.5)
+scale = Vector2(1.33333, 1)
+texture = ExtResource("9_ab04b")
+
+[node name="Label2" type="Label" parent="HUD"]
+visible = false
+offset_left = 350.0
+offset_top = 157.0
+offset_right = 430.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("10_mw27k")
+text = "PAUSE"
 horizontal_alignment = 1
 vertical_alignment = 1
 

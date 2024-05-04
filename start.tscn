@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6jpmebbv8ymg"]
+
+[ext_resource type="Texture2D" uid="uid://cnxwbvhhxa7yc" path="res://Material Duck Hunt/Material Duck Hunt/hud.png" id="1_ni25m"]
+[ext_resource type="FontFile" uid="uid://b5yk6kasstjkb" path="res://Material Duck Hunt/Material Duck Hunt/PressStart2P.ttf" id="2_kxrxq"]
+
+[sub_resource type="SystemFont" id="SystemFont_mrtd7"]
+
+[sub_resource type="Theme" id="Theme_fyhsd"]
+default_font = SubResource("SystemFont_mrtd7")
+
+[node name="Start" type="Node2D"]
+
+[node name="Item" type="Node2D" parent="."]
+visible = false
+
+[node name="Start" type="Node2D" parent="Item"]
+
+[node name="Start" type="Label" parent="Item/Start"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = SubResource("Theme_fyhsd")
+text = "Start"
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="HUD"]
+position = Vector2(388, 603)
+texture = ExtResource("1_ni25m")
+
+[node name="Label" type="Label" parent="HUD"]
+offset_left = 354.0
+offset_top = 580.0
+offset_right = 422.0
+offset_bottom = 624.0
+theme_override_fonts/font = ExtResource("2_kxrxq")
+text = "II"
+horizontal_alignment = 1
+vertical_alignment = 1
