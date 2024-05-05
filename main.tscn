@@ -158,10 +158,10 @@ stream = ExtResource("15_b0j4j")
 
 [node name="Button" type="Button" parent="."]
 z_index = 1
-offset_left = 344.0
-offset_top = 646.0
-offset_right = 421.0
-offset_bottom = 711.0
+offset_left = 24.0
+offset_top = 572.0
+offset_right = 101.0
+offset_bottom = 637.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Button"]
 position = Vector2(44, 32)
