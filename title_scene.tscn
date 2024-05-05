@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://title_scene.gd" id="1_ew7ax"]
 [ext_resource type="Texture2D" uid="uid://xe83k487ik8l" path="res://duckhunt.png" id="1_galc3"]
 [ext_resource type="FontFile" uid="uid://b5yk6kasstjkb" path="res://Material Duck Hunt/Material Duck Hunt/PressStart2P.ttf" id="2_beogl"]
-[ext_resource type="AudioStream" uid="uid://df8rkc0bm6gps" path="res://Material Duck Hunt/Material Duck Hunt/sons/round.wav" id="4_e5f1q"]
+[ext_resource type="AudioStream" uid="uid://bh8rwic7qej0d" path="res://Material Duck Hunt/Material Duck Hunt/sons/start-101soundboards.mp3" id="4_yumli"]
 
 [sub_resource type="Theme" id="Theme_5sohi"]
 
@@ -71,7 +71,7 @@ text = "QUIT"
 layout_mode = 2
 
 [node name="Start" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_e5f1q")
+stream = ExtResource("4_yumli")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Game" to="." method="_on_game_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

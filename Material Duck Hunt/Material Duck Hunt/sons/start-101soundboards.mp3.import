@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bh8rwic7qej0d"
+path="res://.godot/imported/start-101soundboards.mp3-22b7a46e6ca0f097e0eebb4d2ccd48e3.mp3str"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/start-101soundboards.mp3"
+dest_files=["res://.godot/imported/start-101soundboards.mp3-22b7a46e6ca0f097e0eebb4d2ccd48e3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
