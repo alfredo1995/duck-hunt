@@ -35,9 +35,9 @@ texture = ExtResource("1_galc3")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 1450.0
+offset_left = 1375.0
 offset_top = -90.0
-offset_right = 2295.0
+offset_right = 2258.0
 offset_bottom = 307.0
 scale = Vector2(2, 2)
 
@@ -59,7 +59,7 @@ layout_mode = 2
 theme = SubResource("Theme_5sohi")
 theme_type_variation = &"FlatButton"
 theme_override_fonts/font = ExtResource("2_beogl")
-text = "GAME A"
+text = "GAME A   2 DUCK"
 
 [node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 visible = false
@@ -74,6 +74,18 @@ layout_mode = 2
 
 [node name="Start" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_yumli")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.998832, 0.975199, 0.986527, 1)
+layout_mode = 2
+offset_left = 1234.0
+offset_top = 433.0
+offset_right = 1658.0
+offset_bottom = 449.0
+scale = Vector2(1.8, 1.8)
+theme_override_fonts/font = ExtResource("2_beogl")
+text = "© 2024 ALFREDO CO..LTD"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Game" to="." method="_on_game_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
