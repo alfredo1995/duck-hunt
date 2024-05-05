@@ -54,13 +54,15 @@ alignment = 1
 layout_mode = 2
 
 [node name="Game" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+modulate = Color(0.94902, 0.658824, 0.298039, 1)
 layout_mode = 2
 theme = SubResource("Theme_5sohi")
 theme_type_variation = &"FlatButton"
 theme_override_fonts/font = ExtResource("2_beogl")
-text = "GAME"
+text = "GAME A"
 
 [node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme = SubResource("Theme_5sohi")
 theme_type_variation = &"FlatButton"
