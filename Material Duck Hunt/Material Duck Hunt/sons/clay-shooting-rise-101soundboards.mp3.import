@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgyi2sg5xklry"
+path="res://.godot/imported/clay-shooting-rise-101soundboards.mp3-13e9cd2e7442d3e1f51f67378bc2fd5f.mp3str"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/clay-shooting-rise-101soundboards.mp3"
+dest_files=["res://.godot/imported/clay-shooting-rise-101soundboards.mp3-13e9cd2e7442d3e1f51f67378bc2fd5f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

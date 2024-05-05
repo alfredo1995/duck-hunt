@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cs6tovqj0lids"
+path="res://.godot/imported/duck-falling-w-drop-101soundboards.mp3-6c09dde7a9ef0e10c1ea65bac6b6b670.mp3str"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/duck-falling-w-drop-101soundboards.mp3"
+dest_files=["res://.godot/imported/duck-falling-w-drop-101soundboards.mp3-6c09dde7a9ef0e10c1ea65bac6b6b670.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

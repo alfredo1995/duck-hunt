@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0sr2b0vp7mnv"
+path="res://.godot/imported/game-over-101soundboards.mp3-1822a81cd845d375ff5aab15d5c3477b.mp3str"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/game-over-101soundboards.mp3"
+dest_files=["res://.godot/imported/game-over-101soundboards.mp3-1822a81cd845d375ff5aab15d5c3477b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

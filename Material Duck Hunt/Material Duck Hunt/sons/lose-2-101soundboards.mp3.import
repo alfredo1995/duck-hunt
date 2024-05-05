@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd7cipergg4ln"
+path="res://.godot/imported/lose-2-101soundboards.mp3-cf995c2c2c17573ec796d3196f32ec41.mp3str"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/lose-2-101soundboards.mp3"
+dest_files=["res://.godot/imported/lose-2-101soundboards.mp3-cf995c2c2c17573ec796d3196f32ec41.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

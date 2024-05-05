@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0df8f8wdhqyx"
+path="res://.godot/imported/duck-drop-101soundboards.mp3-ec5a073f1429124a8628627bb73d7180.mp3str"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/duck-drop-101soundboards.mp3"
+dest_files=["res://.godot/imported/duck-drop-101soundboards.mp3-ec5a073f1429124a8628627bb73d7180.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

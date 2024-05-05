@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jiuqcsghsj0m"
+path="res://.godot/imported/next-round-101soundboards.mp3-06b9ff040f0a98ad12c9f18785bb49df.mp3str"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/next-round-101soundboards.mp3"
+dest_files=["res://.godot/imported/next-round-101soundboards.mp3-06b9ff040f0a98ad12c9f18785bb49df.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

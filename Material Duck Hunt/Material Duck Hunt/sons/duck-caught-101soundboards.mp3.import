@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7y6jyc3aq37a"
+path="res://.godot/imported/duck-caught-101soundboards.mp3-132fb0fbee1d21b0f12d5151975d0a0a.mp3str"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/duck-caught-101soundboards.mp3"
+dest_files=["res://.godot/imported/duck-caught-101soundboards.mp3-132fb0fbee1d21b0f12d5151975d0a0a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

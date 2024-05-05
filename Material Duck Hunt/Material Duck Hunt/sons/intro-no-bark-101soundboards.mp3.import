@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://can2pjf2lccqk"
+path="res://.godot/imported/intro-no-bark-101soundboards.mp3-9f7f28ab1c600af9ec6fe9c0319fbecc.mp3str"
+
+[deps]
+
+source_file="res://Material Duck Hunt/Material Duck Hunt/sons/intro-no-bark-101soundboards.mp3"
+dest_files=["res://.godot/imported/intro-no-bark-101soundboards.mp3-9f7f28ab1c600af9ec6fe9c0319fbecc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
