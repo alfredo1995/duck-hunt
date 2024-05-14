@@ -4,6 +4,8 @@
 
 https://github.com/alfredo1995/duck-hunt-godot/assets/71193893/1e2bb0b9-77e1-4ac6-b1c9-667827b055f8
 
+<br>
+
 CONTROLS
 
     Shoot: Use the mouse to aim and shoot enemies.
