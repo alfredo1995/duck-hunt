@@ -7,7 +7,7 @@ CONTROLS
 
     Shoot: Use the mouse to aim and shoot enemies.
 
-Link: https://alfredo1995.itch.io/duck-hunt-godot
+    > https://alfredo1995.itch.io/duck-hunt-godot
 
 <br>
 
