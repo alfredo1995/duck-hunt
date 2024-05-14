@@ -37,6 +37,3 @@ At Godot, practically everything is a Node. A node can represent a sprite, an an
 
     Some previous versions of the engine were based on languages such as Lua, Python and Squirrel, but they did not prove to be very efficient. To solve some problems, Godot started to have a custom scripting language, known as GDScript.
 
-The Godot Engine is 100% free, open source and has a very permissive MIT license, meaning no royalties are charged and all rights to the game belong to the developer.
-
-
