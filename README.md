@@ -9,10 +9,9 @@ CONTROLS
 
 Link: https://alfredo1995.itch.io/duck-hunt-godot
 
+<br>
 
 At Godot, practically everything is a Node. A node can represent a sprite, an animation, a sound or practically anything else in your project.
-
-All Nodes have some things in common:
 
     Name: Each node has a name so it can be called;
 
