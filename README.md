@@ -1,4 +1,4 @@
-<h2> Game inspired by Duck Hunt, with target shooting mechanics, animations and turn system, using the GDScript scripting language for the Godot engine. </h2>
+<h2> Game inspired by Duck Hunt, with target shooting mechanics, animations and turn system, using the GDScript scripting language for the Godot </h2>
 
 <br>
 
@@ -10,6 +10,7 @@ CONTROLS
 
 > https://alfredo1995.itch.io/duck-hunt-godot
 
+<br>
 <br>
 
 At Godot, practically everything is a Node. A node can represent a sprite, an animation, a sound
